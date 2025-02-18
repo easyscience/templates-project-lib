@@ -3,11 +3,11 @@
 ###############################
 
 [project]
-name = '{{ package_name }}'
+name = '{{ lib__package_name }}'
 dynamic = ['version'] # Use versioningit to manage the version
-description = '{{ description }}'
+description = '{{ project__description }}'
 authors = [
-  { name = '{{ project_name }} contributors', email = '{{ contributors_email }}' },
+  { name = '{{ project__name }} contributors' },
 ]
 readme = 'README.md'
 license = { file = 'LICENSE' }
@@ -23,7 +23,7 @@ classifiers = [
   'Programming Language :: Python :: 3.11',
   'Programming Language :: Python :: 3.12',
 ]
-requires-python = '>={{ min_python }},<={{ max_python }}'
+requires-python = '>={{ lib__python_min }},<={{ lib__python_max }}'
 dependencies = [
   'easyscience',         # The base library of the EasyScience framework
   'pooch',               # Data downloader
@@ -59,10 +59,10 @@ docs = [
 ]
 
 [project.urls]
-homepage = '{{ homepage_url }}'
-documentation = '{{ docs_url }}'
-source = 'https://github.com/easyscience/{{ project_repo }}'
-tracker = 'https://github.com/easyscience/{{ project_repo }}/issues'
+homepage = '{{ project__urls__homepage }}'
+documentation = '{{ project__urls__lib_docs }}'
+source = 'https://github.com/easyscience/{{ project__repos__lib }}'
+tracker = 'https://github.com/easyscience/{{ project__repos__lib }}/issues'
 
 ############################
 # Build system configuration
@@ -83,7 +83,7 @@ requires = ['hatchling', 'versioningit']
 #############################
 
 [tool.hatch.build.targets.wheel]
-packages = ['src/{{ package_name }}']
+packages = ['src/{{ lib__package_name }}']
 
 [tool.hatch.metadata]
 allow-direct-references = true

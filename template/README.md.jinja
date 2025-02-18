@@ -1,11 +1,11 @@
-**{{ project_name }}** is a {{description}}.
+**{{ project__name }}** is a Python package for {{ project__description | lower }}.
 
-**{{ project_name }}** is built upon the [EasyScience] framework, which provides
+**{{ project__name }}** is built upon the [EasyScience] framework, which provides
 essential tools for developing scientific libraries and applications.
 
 ## Useful Links
 
-- [Main Website] - Learn more about {{ project_name }}.
+- [Main Website] - Learn more about {{ project__name }}.
 - [Documentation] - Access the full documentation.
 - [Discussions] - Ask questions or share ideas.
 - [Issue Tracker] - Report bugs or request new features.
@@ -13,7 +13,7 @@ essential tools for developing scientific libraries and applications.
 
 ## Contributing
 
-We welcome contributions! Our vision is for **{{ project_name }}** to be a
+We welcome contributions! Our vision is for **{{ project__name }}** to be a
 community-driven, open-source project supported by a diverse group of
 contributors.
 
@@ -25,16 +25,16 @@ requests.
 
 ## License
 
-**{{project_name}}** is licensed under the [BSD 3-Clause License].
+**{{project__name}}** is licensed under the [BSD 3-Clause License].
 
 <!-- prettier-ignore-start -->
-[BSD 3-Clause License]: https://github.com/easyscience/{{repo}}/blob/master/LICENSE
-[Contributing Guidelines]: https://github.com/easyscience/{{repo}}/blob/master/CONTRIBUTING.md
+[BSD 3-Clause License]: https://github.com/easyscience/{{ project__repos__lib }}/blob/master/LICENSE
+[Contributing Guidelines]: https://github.com/easyscience/{{ project__repos__lib }}/blob/master/CONTRIBUTING.md
 [EasyScience]: https://easyscience.software
 [European Spallation Source (ESS)]: https://ess.eu
-[Main Website]: {{site_url}}
-[Documentation]: {{docs_url}}
-[Discussions]: https://github.com/easyscience/{{repo}}/discussions
-[Issue Tracker]: https://github.com/easyscience/{{repo}}/issues
-[Source Code]: https://github.com/easyscience/{{repo}}
+[Main Website]: {{ project__urls__homepage }}
+[Documentation]: {{ project__urls__lib_docs }}
+[Discussions]: https://github.com/easyscience/{{ project__repos__lib }}/discussions
+[Issue Tracker]: https://github.com/easyscience/{{ project__repos__lib }}/issues
+[Source Code]: https://github.com/easyscience/{{ project__repos__lib }}
 <!-- prettier-ignore-end -->

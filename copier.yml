@@ -1,13 +1,23 @@
+# Define the subdirectory containing the template files
 _subdirectory: template
 
+# Specify the file to store user responses
 _answers_file: .copier-answers.python-lib.yml
 
-lib_package_name:
+# Python package name
+lib__package_name:
   type: str
-  help: Python package name?
-lib_python_min:
+  default: "{{ project__name | lower }}"
+  help: "Specify the project's Python package name (use lowercase letters)."
+
+# Minimum Python version
+lib__python_min:
   type: str
-  help: Minimum Python version?
-lib_python_max:
+  default: "3.9"
+  help: "Specify the minimum Python version required."
+
+# Maximum Python version
+lib__python_max:
   type: str
-  help: Maximum Python version that is known to work?
+  default: "3.12"
+  help: "Specify the maximum Python version required."
