@@ -6,22 +6,19 @@
 name = '{{ lib__package_name }}'
 dynamic = ['version'] # Use versioningit to manage the version
 description = '{{ project__description }}'
-authors = [
-  { name = '{{ project__name }} contributors' },
-]
+authors = [{ name = 'EasyScience contributors' }]
 readme = 'README.md'
 license = { file = 'LICENSE' }
 classifiers = [
+  'Intended Audience :: Science/Research',
   'Topic :: Scientific/Engineering',
-  'Development Status :: 4 - Beta',
   'License :: OSI Approved :: BSD License',
   'Operating System :: OS Independent',
   'Programming Language :: Python :: 3 :: Only',
   'Programming Language :: Python :: 3',
-  'Programming Language :: Python :: 3.9',
-  'Programming Language :: Python :: 3.10',
-  'Programming Language :: Python :: 3.11',
-  'Programming Language :: Python :: 3.12',
+  {%- for version in range(lib__python_min.split(".")[1] | int, lib__python_max.split(".")[1] | int + 1) %}
+      "Programming Language :: Python :: 3.{{version}}",
+  {%- endfor %}
 ]
 requires-python = '>={{ lib__python_min }},<={{ lib__python_max }}'
 dependencies = [
