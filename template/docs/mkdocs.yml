@@ -1,0 +1,17 @@
+# Project information
+site_name: {{ project__name }} Library
+site_url: {{ project__urls__lib_docs }}
+
+# Repository
+repo_url: {{ project__repos__lib }}
+edit_uri: edit/develop/docs/
+
+# Copyright
+copyright: © {{ project__copyright_year }} {{ project__name }}
+
+# Format and layout of the global navigation for the site
+nav:
+  - Introduction: index.md
+  - Getting started: getting-started.md
+  - How to use:
+      - how-to-use/index.md
