@@ -2,7 +2,7 @@
 _subdirectory: template
 
 # Specify the file to store user responses
-_answers_file: .copier-answers.python-lib.yml
+_answers_file: .copier-answers.project-lib.yml
 
 # Python package name
 lib__package_name:
