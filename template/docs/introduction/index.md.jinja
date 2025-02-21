@@ -5,8 +5,6 @@
 {{project__name}} is scientific software for
 {{project__extended_description}}.
 
-![](assets/images/hero_dark.png#gh-dark-mode-only)![](assets/images/hero_light.png#gh-light-mode-only)
-
 {% if project__deployment_type == "both" %}
 {{project__name}} is distributed as both a cross-platform desktop application
 and a Python library.
@@ -19,6 +17,8 @@ Documentation for the {{project__name}} graphical user interface can be found
 {% elif project__deployment_type == "app" %}
 {{project__name}} is distributed as a cross-platform desktop application.
 {% endif %}
+
+![](assets/images/hero_dark.png#gh-dark-mode-only)![](assets/images/hero_light.png#gh-light-mode-only)
 
 ## EasyScience
 
@@ -40,4 +40,5 @@ The latest release of {{project__name}} Python library is
 For general questions or comments, please contact us at support@easydiffraction.org.
 
 For bug reports and feature requests, please use
-[GitHub Issue Tracker](https://github.com/easyscience/{{project__repos__lib}}/issues) instead (free registration required).
+[GitHub Issue Tracker](https://github.com/easyscience/{{project__repos__lib}}/issues)
+instead (free registration required).
