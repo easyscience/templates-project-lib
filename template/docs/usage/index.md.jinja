@@ -4,24 +4,31 @@ icon: material/book-open-variant
 
 # :material-book-open-variant: User Guide
 
-This section explains core concepts, workflow steps, and parameters required for using {{project__name}} effectively.
+This section provides an overview of the **core concepts**, **workflow steps**,
+and **key parameters** required for using {{project__name}} effectively.
 
-## Import EasyDiffraction
+## Importing EasyDiffraction
 
-To use EasyDiffraction, you need to import the package. The following code snippet demonstrates how to import EasyDiffraction:
-
+To start using {{project__name}}, first import the package in your Python
+script or Jupyter Notebook:
 ```python
 import easydiffraction as ed
 ```
 
-## Creating Job object
+## Creating a job object
 
-The `Job` object is the main object that stores all the information required for the diffraction calculation. The following code snippet demonstrates how to create a `Job` object:
-
+The **Job** object is central to {{project__name}}, storing all necessary
+information for performing diffraction calculations. Below is an example of how
+to create a Job object:
 ```python
 job = ed.Job()
 ```
 
+This object serves as a container for **model definitions**,
+**experimental data**, and **analysis settings**.
+
 ## Data analysis workflow
 
-As a next step, you can follow the data analysis workflow, which is described in detail in the [Workflow Steps](workflow-steps) section.
+Once the Job object is created, you can proceed with the
+**data analysis workflow**, which is described in detail in the
+[Workflow steps](workflow-steps) section of the documentation.
