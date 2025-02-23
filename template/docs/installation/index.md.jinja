@@ -6,9 +6,9 @@ icon: material/cog-box
 
 ## Requirements
 
-{{project__name}} is a multi-platform Python library compatible with Python
-{{lib__python_min}} through {{lib__python_max}}. Ensure Python is installed on
-your system before proceeding with the installation.
+{{project__name}} is a multi-platform Python library compatible with **Python
+{{lib__python_min}} through {{lib__python_max}}**. Ensure Python is installed
+on your system before proceeding with the installation.
 
 ## Environment setup <small>optional</small> { #environment-setup data-toc-label="Environment setup" }
 
@@ -16,48 +16,57 @@ We recommend using a **virtual environment** to isolate dependencies and avoid c
 
 #### Creating and Activating a Virtual Environment:
 
-* Create a new virtual environment:
-```console
-python3 -m venv venv
-```
-
+- Create a new virtual environment:
+  ```console
+  python3 -m venv venv
+  ```
 <!-- prettier-ignore-start -->
-* Activate the environment:
+- Activate the environment:
 
-=== ":material-apple: macOS"
-    ```console
-    . venv/bin/activate
-    ```
-=== ":material-linux: Linux"
-    ```console
-    . venv/bin/activate
-    ```
-=== ":fontawesome-brands-windows: Windows"
-    ```console
-    . venv/Scripts/activate      # Windows with Unix like shells
-    .\venv\Scripts\activate.bat  # Windows with CMD
-    .\venv\Scripts\activate.ps1  # Windows with Power shell
-    ```
+    === ":material-apple: macOS"
+        ```console
+        . venv/bin/activate
+        ```
+    === ":material-linux: Linux"
+        ```console
+        . venv/bin/activate
+        ```
+    === ":fontawesome-brands-windows: Windows"
+        ```console
+        . venv/Scripts/activate      # Windows with Unix like shells
+        .\venv\Scripts\activate.bat  # Windows with CMD
+        .\venv\Scripts\activate.ps1  # Windows with Power shell
+        ```
 <!-- prettier-ignore-end -->
-
-* The terminal should now show `(venv)`, indicating that the virtual environment is active.
+- The terminal should now show `(venv)`, indicating that the virtual
+  environment is active.
 
 #### Deactivating and Removing the Virtual Environment:
 
-* Exit the environment with:
-```console
-deactivate
-```
+- Exit the environment with:
+  ```console
+  deactivate
+  ```
+<!-- prettier-ignore-start -->
+- If this environment is no longer needed, delete it:
 
-* If this environment is no longer needed, delete it:
-```console
-rm -rf venv       # macOS/Linux
-rmdir /s /q venv  # Windows
-```
+    === ":material-apple: macOS"
+        ```console
+        rm -rf venv
+        ```
+    === ":material-linux: Linux"
+        ```console
+        rm -rf venv
+        ```
+    === ":fontawesome-brands-windows: Windows"
+        ```console
+        rmdir /s /q venv
+        ```
+<!-- prettier-ignore-end -->
 
 ## Installation guide
 
-### Installing from PyPI <small>recommended</small> { #from-pypi data-toc-label="From PyPI" }
+### Installing from PyPI <small>recommended</small> { #from-pypi data-toc-label="Installing from PyPI" }
 
 {{project__name}} is available on **PyPI (Python Package Index)** and
 can be installed using `pip`. It is recommended to install it within a
@@ -69,7 +78,7 @@ charts and tables. This can be especially useful for running the Jupyter
 Notebook examples. To do so, use the following command:
 
 ```console
-pip install '{{lib__package_nam}}[charts]'
+pip install '{{lib__package_name}}[charts]'
 ```
 
 If only the core functionality is needed, the library can be installed simply
@@ -113,7 +122,7 @@ To include extra dependencies (e.g., charts):
 pip install '{{ lib__package_name }}[charts] @ git+https://github.com/easyscience/{{ project__repos__lib }}@develop'
 ```
 
-## Running Tutorials
+## Running tutorials
 
 {{project__name}} provides a collection of **Jupyter Notebook examples** that
 demonstrate various functionalities. These tutorials are available in the
@@ -121,15 +130,16 @@ demonstrate various functionalities. These tutorials are available in the
 documentation.
 
 You can also run these tutorials:
-* **Locally on your machine**
-* **Online via Google Colab** (no local installation required)
+
+- **Locally on your machine**
+- **Online via Google Colab** (no local installation required)
 
 These Jupyter Notebook examples can be downloaded either one by one from the
 [Hands-on Tutorials](tutorials/index.md#how-to-use) section or all together as a zip
 archive from the
 [{{project__name}} releases](https://github.com/easyscience/{{ project__repos__lib }}/releases/latest).
 
-### Run locally
+### Run tutorials locally
 
 To run tutorials locally, install Jupyter Notebook or JupyterLab.
 Here are the steps to take in the case of Jupyter Notebook:
@@ -156,7 +166,7 @@ Here are the steps to take in the case of Jupyter Notebook:
   ```
 - Select one of the `*.ipynb` files.
 
-### Running Tutorials via Google Colab
+### Running tutorials via Google Colab
 
 **Google Colab** allows you to run Jupyter Notebooks in the cloud without any local installation.
 
