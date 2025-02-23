@@ -6,24 +6,23 @@ icon: material/cog-box
 
 ## Requirements
 
-The {{ project__name }} is multi-platform library developed in Python,
-so Python must be installed on your system. The library is compatible with Python versions
-{{ lib__python_min }} through {{ lib__python_max }}.
+{{project__name}} is a multi-platform Python library compatible with Python
+{{lib__python_min}} through {{lib__python_max}}. Ensure Python is installed on
+your system before proceeding with the installation.
 
 ## Environment setup <small>optional</small> { #environment-setup data-toc-label="Environment setup" }
 
-We recommend using a virtual environment – an isolated Python runtime where any
-packages you install or update are contained within that environment. If you
-encounter issues, you can simply delete and recreate the environment. Setting it
-up is straightforward:
+We recommend using a **virtual environment** to isolate dependencies and avoid conflicts with system-wide packages. If issues arise, you can simply delete and recreate the environment.
 
-Create a new virtual environment with:
+#### Creating and Activating a Virtual Environment:
+
+* Create a new virtual environment:
 ```console
 python3 -m venv venv
 ```
 
 <!-- prettier-ignore-start -->
-Activate the environment with:
+* Activate the environment:
 
 === ":material-apple: macOS"
     ```console
@@ -41,25 +40,27 @@ Activate the environment with:
     ```
 <!-- prettier-ignore-end -->
 
-Your terminal should now print `(venv)` before the prompt, which is how you know
-that you are inside the virtual environment that you just created.
+* The terminal should now show `(venv)`, indicating that the virtual environment is active.
 
-Exit the environment with:
+#### Deactivating and Removing the Virtual Environment:
+
+* Exit the environment with:
 ```console
 deactivate
 ```
 
-If this environment is no longer needed, you can delete it with:
+* If this environment is no longer needed, delete it:
 ```console
-rm -rf venv
+rm -rf venv       # macOS/Linux
+rmdir /s /q venv  # Windows
 ```
 
 ## Installation guide
 
-### From PyPI <small>recommended</small> { #from-pypi data-toc-label="From PyPI" }
+### Installing from PyPI <small>recommended</small> { #from-pypi data-toc-label="From PyPI" }
 
-{{ project__name }} is published on the Python Package Index (PyPI) repository and
-can be installed with the package installer for Python (pip), ideally by using a
+{{project__name}} is available on **PyPI (Python Package Index)** and
+can be installed using `pip`. It is recommended to install it within a
 [virtual environment](#environment-setup).
 
 We recommend installing the latest release of {{ project__name }} with the `charts`
@@ -68,47 +69,45 @@ charts and tables. This can be especially useful for running the Jupyter
 Notebook examples. To do so, use the following command:
 
 ```console
-pip install '{{ lib__package_name }}[charts]'
+pip install '{{lib__package_nam}}[charts]'
 ```
 
 If only the core functionality is needed, the library can be installed simply
 with:
 
 ```console
-pip install {{ lib__package_name }}
+pip install {{lib__package_name}}
 ```
 
-To install a specific version of {{ project__name }}, e.g. 1.0.3, use:
+To install a specific version of {{project__name}}, e.g. 1.0.3:
 
 ```console
-pip install '{{ lib__package_name }}==1.0.3'
+pip install '{{lib__package_name}}==1.0.3'
 ```
 
 Upgrading to the latest version can be done with:
 
 ```console
-pip install --upgrade --force-reinstall {{ lib__package_name }}
+pip install --upgrade --force-reinstall {{lib__package_name}}
 ```
 
-To show the currently installed version, use:
+To check the installed version:
 
 ```console
-pip show {{ lib__package_name }}
+pip show {{lib__package_name}}
 ```
 
-### From GitHub
+### Installing from GitHub
 
-Installing an unreleased version is not recommended and should only be done for
-testing purposes.
+Installing an unreleased version is generally not recommended but can be useful for testing purposes.
 
-Here is an example of how to install {{ project__name }} directly from our GitHub
-repository, e.g., from the `develop` branch:
+To install {{project__name}} from, e.g., the `develop` branch of GitHub:
 
 ```console
 pip install git+https://github.com/easyscience/{{ project__repos__lib }}@develop
 ```
 
-To do the same with extra dependencies, use:
+To include extra dependencies (e.g., charts):
 
 ```console
 pip install '{{ lib__package_name }}[charts] @ git+https://github.com/easyscience/{{ project__repos__lib }}@develop'
@@ -116,34 +115,34 @@ pip install '{{ lib__package_name }}[charts] @ git+https://github.com/easyscienc
 
 ## Running Tutorials
 
-We have a collection of Jupyter Notebook examples that demonstrate how to use
-{{ project__name }} for various tasks. These tutorials are presented in the
-[Hands-on Tutorials](tutorials/index.md#how-to-use) section of the documentation as
-static HTML pages.
+{{project__name}} provides a collection of **Jupyter Notebook examples** that
+demonstrate various functionalities. These tutorials are available in the
+[Hands-on Tutorials](tutorials/index.md#how-to-use) section of the
+documentation.
 
-You can also run these Jupyter Notebook examples yourself either locally or in
-Google Colab.
+You can also run these tutorials:
+* **Locally on your machine**
+* **Online via Google Colab** (no local installation required)
 
 These Jupyter Notebook examples can be downloaded either one by one from the
 [Hands-on Tutorials](tutorials/index.md#how-to-use) section or all together as a zip
 archive from the
-[{{ project__name }} releases](https://github.com/easyscience/{{ project__repos__lib }}/releases/latest).
+[{{project__name}} releases](https://github.com/easyscience/{{ project__repos__lib }}/releases/latest).
 
 ### Run locally
 
-To run the examples locally, you need to install Jupyter Notebook or JupyterLab.
+To run tutorials locally, install Jupyter Notebook or JupyterLab.
 Here are the steps to take in the case of Jupyter Notebook:
 
 - Install Jupyter Notebook:
   ```console
   pip install notebook
   ```
-- Download {{ project__name }} examples from GitHub for the latest release, e.g.,
-  using curl:
+- Download the latest {{project__name}} tutorial examples from GitHub, e.g., using curl:
   ```console
-  curl --location --remote-name https://github.com/easyscience/{{ project__repos__lib }}/releases/latest/download/examples.zip
+  curl --location --remote-name https://github.com/easyscience/{{project__repos__lib}}/releases/latest/download/examples.zip
   ```
-- Unzip the downloaded archive:
+- Unzip the archive:
   ```console
   unzip examples.zip
   ```
@@ -157,16 +156,14 @@ Here are the steps to take in the case of Jupyter Notebook:
   ```
 - Select one of the `*.ipynb` files.
 
-### Via Google Colab
+### Running Tutorials via Google Colab
 
-!!! note
+**Google Colab** allows you to run Jupyter Notebooks in the cloud without any local installation.
 
-    To run the examples in Google Colab, you need to have a Google account.
+To use Google Colab:
 
-Google Colab is a free cloud service that allows you to run Jupyter Notebooks
-online, enabling you to run the examples without installing anything on your
-local machine.
+- Ensure you have a **Google account**.
+- Navigate to the **[Hands-on Tutorials](tutorials/index.md#how-to-use)** section of the documentation.
+- Click the :google-colab: **Open in Google Colab** button available for each example.
 
-In the top right corner of each example, under the
-[Hands-on Tutorials](tutorials/index.md#how-to-use) section, you will find a button to
-open that example in Google Colab :google-colab:
+This method allows you to experiment with {{project__name}} tutorials instantly, without setting up a Python environment on your system.
