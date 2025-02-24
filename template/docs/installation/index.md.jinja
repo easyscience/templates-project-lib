@@ -12,7 +12,9 @@ on your system before proceeding with the installation.
 
 ## Environment setup <small>optional</small> { #environment-setup data-toc-label="Environment setup" }
 
-We recommend using a **virtual environment** to isolate dependencies and avoid conflicts with system-wide packages. If issues arise, you can simply delete and recreate the environment.
+We recommend using a **virtual environment** to isolate dependencies and avoid
+conflicts with system-wide packages. If issues arise, you can simply delete and
+recreate the environment.
 
 #### Creating and Activating a Virtual Environment:
 
@@ -72,10 +74,10 @@ We recommend using a **virtual environment** to isolate dependencies and avoid c
 can be installed using `pip`. It is recommended to install it within a
 [virtual environment](#environment-setup).
 
-We recommend installing the latest release of {{ project__name }} with the `charts`
-extras, which include optional dependencies used for simplified visualization of
-charts and tables. This can be especially useful for running the Jupyter
-Notebook examples. To do so, use the following command:
+We recommend installing the latest release of {{ project__name }} with the
+`charts` extras, which include optional dependencies used for simplified
+visualization of charts and tables. This can be especially useful for running
+the Jupyter Notebook examples. To do so, use the following command:
 
 ```console
 pip install '{{lib__package_name}}[charts]'
@@ -108,7 +110,8 @@ pip show {{lib__package_name}}
 
 ### Installing from GitHub
 
-Installing an unreleased version is generally not recommended but can be useful for testing purposes.
+Installing an unreleased version is generally not recommended but can be useful
+for testing purposes.
 
 To install {{project__name}} from, e.g., the `develop` branch of GitHub:
 
@@ -126,7 +129,7 @@ pip install '{{ lib__package_name }}[charts] @ git+https://github.com/easyscienc
 
 {{project__name}} provides a collection of **Jupyter Notebook examples** that
 demonstrate various functionalities. These tutorials are available in the
-[Hands-on Tutorials](tutorials/index.md#how-to-use) section of the
+[:material-school: Hands-on Tutorials](../tutorials/index.md) section of the
 documentation.
 
 You can also run these tutorials:
@@ -135,8 +138,8 @@ You can also run these tutorials:
 - **Online via Google Colab** (no local installation required)
 
 These Jupyter Notebook examples can be downloaded either one by one from the
-[Hands-on Tutorials](tutorials/index.md#how-to-use) section or all together as a zip
-archive from the
+[:material-school: Hands-on Tutorials](../tutorials/index.md) section or all
+together as a zip archive from the
 [{{project__name}} releases](https://github.com/easyscience/{{ project__repos__lib }}/releases/latest).
 
 ### Run tutorials locally
@@ -148,7 +151,8 @@ Here are the steps to take in the case of Jupyter Notebook:
   ```console
   pip install notebook
   ```
-- Download the latest {{project__name}} tutorial examples from GitHub, e.g., using curl:
+- Download the latest {{project__name}} tutorial examples from GitHub, e.g.,
+  using curl:
   ```console
   curl --location --remote-name https://github.com/easyscience/{{project__repos__lib}}/releases/latest/download/examples.zip
   ```
@@ -168,12 +172,17 @@ Here are the steps to take in the case of Jupyter Notebook:
 
 ### Running tutorials via Google Colab
 
-**Google Colab** allows you to run Jupyter Notebooks in the cloud without any local installation.
+**Google Colab** allows you to run Jupyter Notebooks in the cloud without any
+local installation.
 
 To use Google Colab:
 
 - Ensure you have a **Google account**.
-- Navigate to the **[Hands-on Tutorials](tutorials/index.md#how-to-use)** section of the documentation.
-- Click the :google-colab: **Open in Google Colab** button available for each example.
+- Navigate to the
+  **[:material-school: Hands-on Tutorials](../tutorials/index.md)** section of
+  the documentation.
+- Click the :google-colab: **Open in Google Colab** button available for each
+  tutorial.
 
-This method allows you to experiment with {{project__name}} tutorials instantly, without setting up a Python environment on your system.
+This method allows you to experiment with {{project__name}} tutorials
+instantly, without setting up a Python environment on your system.
