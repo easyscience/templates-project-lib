@@ -4,7 +4,8 @@ cp -R ../assets-docs/includes/ includes/
 cp -R ../assets-docs/overrides/ overrides/
 
 echo "\033[0;33m:::::: Add the extra files from the ../assets-branding\033[0m"
-cp ../assets-branding/easydiffraction/hero/dark.png docs/assets/images/dark_light.png
+mkdir -p overrides/images/
+cp ../assets-branding/easydiffraction/hero/dark.png docs/assets/images/hero_dark.png
 cp ../assets-branding/easydiffraction/hero/light.png docs/assets/images/hero_light.png
 cp ../assets-branding/easydiffraction/logos/dark.svg docs/assets/images/logo_dark.svg
 cp ../assets-branding/easydiffraction/logos/light.svg docs/assets/images/logo_light.svg
