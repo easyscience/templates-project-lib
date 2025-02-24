@@ -10,8 +10,9 @@ edit_uri: edit/develop/docs/
 copyright: © {{ project__copyright_year }} {{ project__name }}
 
 # Format and layout of the global navigation for the site
+not_in_nav: |
+  usage/dictionaries
 nav:
-  #- Home: index.md
   - Introduction:
       - Introduction: introduction/index.md
   - Installation & Setup:
@@ -30,18 +31,18 @@ nav:
   - Hands-on Tutorials:
       - Hands-on Tutorials: tutorials/index.md
       - Basic Examples:
-          - Define Model: examples/Define-model.ipynb
-          - Define Experiment: examples/Define-experiment.ipynb
+          - Define Model: tutorials/Define-model.ipynb
+          - Define Experiment: tutorials/Define-experiment.ipynb
       - Simulation:
-          - pd-xray NaCl: examples/Simulation_pd-xray_NaCl.ipynb
+          - pd-xray NaCl: tutorials/Simulation_pd-xray_NaCl.ipynb
       - Fitting:
-          - pd-neut-cwl LBCO-HRPT: examples/Fitting_pd-neut-cwl_LBCO-HRPT.ipynb
-          - pd-neut-tof Si-SEPD: examples/Fitting_pd-neut-tof_Si-SEPD.ipynb
-          - pd-neut-tof NCAF-WISH: examples/Fitting_pd-neut-tof_NCAF-WISH.ipynb
+          - pd-neut-cwl LBCO-HRPT: tutorials/Fitting_pd-neut-cwl_LBCO-HRPT.ipynb
+          - pd-neut-tof Si-SEPD: tutorials/Fitting_pd-neut-tof_Si-SEPD.ipynb
+          - pd-neut-tof NCAF-WISH: tutorials/Fitting_pd-neut-tof_NCAF-WISH.ipynb
       - Advanced fitting:
-          - MCMC pd-neut-tof NCAF-WISH: examples/Fitting-emcee_pd-neut-cwl_LBCO-HRPT.ipynb
+          - MCMC pd-neut-tof NCAF-WISH: tutorials/Fitting-emcee_pd-neut-cwl_LBCO-HRPT.ipynb
       - Additional examples:
-          - Change Minimizer: examples/Change-minimizer.ipynb
+          - Change Minimizer: tutorials/Change-minimizer.ipynb
   - API Reference:
       - API Reference: api/index.md
   - Contributing:
