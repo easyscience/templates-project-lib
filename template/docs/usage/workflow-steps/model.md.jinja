@@ -4,17 +4,26 @@ icon: material/puzzle
 
 # :material-puzzle: Model
 
-EasyDiffraction allow you to load the crystallographic model in CIF format or to create a new one manually.
-The model is then used to calculate the diffraction pattern, which is compared to
-the experimental data. The model parameters can be refined to improve the
-agreement between the calculated and measured data.
+The **Model** in EasyDiffraction represents the **crystallographic structure**
+used to calculate the diffraction pattern. This pattern is then compared to
+the **experimental data** to analyze and refine the structural parameters.
 
-Below you can find how to define a model of a crystal structure in EasyDiffraction. It is assumed that you have already
-imported the easydiffraction package and created a `Job` object, as described in the [User Guide](../index).
+EasyDiffraction allows you to:
 
-## Set manually
+- **Load an existing model** from a **CIF file**.
+- **Manually define** a new model by specifying crystallographic parameters.
 
-You can set the model manually by defining the crystallographic parameters of the phase. Here is an example of how to create a model of NaCl:
+Below, you will find instructions on how to define and manage crystallographic
+models in EasyDiffraction. It is assumed that you have already **imported the
+`easydiffraction` package** and created a **Job** object, as described in the
+[User Guide](../index).
+
+## Defining a Model Manually
+
+You can manually define a model by specifying the **space group**,
+**unit cell parameters**, and **atomic positions**.
+
+#### Example: Creating a NaCl Model
 
 ```python
 # Create a phase object
@@ -23,10 +32,10 @@ phase = ed.Phase(name='nacl')
 # Set space group
 phase.space_group.name_hm_alt = 'F m -3 m'
 
-# Set cell parameters
+# Define unit cell parameters
 phase.cell.length_a = 5.691694
 
-# Add atoms
+# Add atomic sites
 phase.atom_sites.append(label='Na',
                         type_symbol='Na',
                         fract_x=0,
@@ -43,34 +52,38 @@ phase.atom_sites.append(label='Cl',
                         b_iso_or_equiv=0.5)
 ```
 
-## Load from CIF
+## Loading a Model from a CIF File
 
-You can load the model from a CIF file. Here is an example of how to load a model from a CIF file:
+Instead of defining the model manually, you can load a crystallographic information file (CIF) directly:
 
 ```python
-# Load a phase from the downloaded CIF file
+# Load a phase from a CIF file
 job.add_phase_from_file('data/lbco.cif')
 ```
 
-## Show phase names
+## Listing Defined Phases
+
+To check which phases have been added to the `Job`, use:
 
 ```python
 print(job.phases)
 ```
 
-This should print the names of the phases in the job:
+Expected output:
 
 ```
 Collection of 2 phases: ['nacl', 'lbco']
 ```
 
-## Show phase as CIF
+## Viewing a Phase as a CIF File
+
+To inspect a phase in CIF format, use:
 
 ```python
 print(job.phases['lbco'].cif)
 ```
 
-This should print the CIF representation of the phase:
+Example output:
 
 ```cif
 data_lbco
@@ -98,4 +111,5 @@ Co Co 0.5 0.5 0.5 1.00000000 Biso 0.1
 O O 0.00000000 0.5 0.5 1.00000000 Biso 0.1
 ```
 
-When you have defined the model, you can go to the next step: [Experiment](experiment.md).
+Now that the Model has been defined, you can proceed to the next step:
+[Experiment](experiment.md).

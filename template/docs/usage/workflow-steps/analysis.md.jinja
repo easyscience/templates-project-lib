@@ -4,29 +4,29 @@ icon: material/calculator
 
 # :material-calculator: Analysis
 
-This section contains information about the analysis of diffraction data in
-EasyDiffraction.
+This section provides an overview of **diffraction data analysis** in
+EasyDiffraction, focusing on model-dependent analysis, calculation engines,
+and minimization techniques.
 
 ### Model-dependent analysis
 
-There are two general approaches to the analysis of data: **model-dependent**
-and **model-independent**. In the following examples, we are going to focus on
-the former. However, the latter is worth briefly highlighting.
+There are two general approaches to the analysis:
 
-A model-independent approach to analysis is where no assumptions are made about
-the system that is being studied and conclusions are drawn only from the data
-that has been observed. However, in many applications, it is desirable to
-include what we think we know about the system, and so model-dependent analysis
-is used.
+- **Model-Independent Analysis** – No assumptions are made about the system;
+  conclusions are drawn purely from observed data.
+- **Model-Dependent Analysis** – A mathematical model is developed to describe
+  the system, incorporating known physical and chemical principles.
 
-Model-dependent analysis involves the development of a mathematical model that
-describes the model dataset that would be found for our system. This
-mathematical model usually has parameters that are linked to the physics and
-chemistry of our system. These parameters are varied to optimise the model,
-using an optimisation algorithm, with respect to the experimental data, i.e., to
-get the best agreement between the model data and the experimental data.
+In EasyDiffraction, we focus on **model-dependent analysis**, where a model is
+constructed based on prior knowledge of the system, and its parameters are
+optimized to achieve the best agreement between experimental and calculated
+diffraction data.
 
-Below is a diagram illustrating this process:
+#### Workflow of model-dependent analysis
+
+The process of refining a model involves iterating through multiple steps until
+the calculated data sufficiently matches the experimental data. This
+process is illustrated below:
 
 ```mermaid
 flowchart LR
@@ -45,28 +45,34 @@ flowchart LR
 Model-dependent analysis is popular in the analysis of neutron scattering data,
 and we will use it in the following examples.
 
+Model-dependent analysis is widely used in **neutron and X-ray diffraction
+studies**, where refining model parameters enables a deeper understanding of
+material structures.
+
 ## Calculation engines
 
-EasyDiffraction is designed to be a flexible and extensible tool for calculating
-diffraction patterns. It can use different calculation engines to perform the
-calculations.
+EasyDiffraction is designed as a flexible and extensible tool that supports
+different **calculation engines** for diffraction pattern simulations.
+Currently, we integrate:
 
-We currently rely on [CrysPy](https://www.cryspy.fr) as a calculation engine.
+### [CrysPy](https://www.cryspy.fr)
+
 CrysPy is a Python library originally developed for analysing polarised neutron
 diffraction data. It is now evolving into a more general purpose library and
 covers powders and single crystals, nuclear and (commensurate) magnetic
 structures, unpolarised neutron and X-ray diffraction.
 
-Another calculation engine is
-[CrysFML](https://code.ill.fr/scientific-software/CrysFML2008). This library is
-a collection of Fortran modules for crystallographic computations. It is used in
-the software package [FullProf](https://www.ill.eu/sites/fullprof/), and we are
+### [CrysFML](https://code.ill.fr/scientific-software/CrysFML2008).
+
+This library is a collection of Fortran modules for crystallographic computations.
+It is used in the software package [FullProf](https://www.ill.eu/sites/fullprof/), and we are
 currently working on its integration into EasyDiffraction.
 
 ## Minimisation engines
 
-EasyDiffraction uses different third-party libraries to perform the
-model-dependent analysis.
+EasyDiffraction utilizes various third-party libraries for model refinement
+and parameter optimization. These libraries provide robust curve fitting and
+uncertainty estimation tools.
 
 Most of the examples in this section will use the
 [lmfit](https://lmfit.github.io/lmfit-py/) package, which provides a high-level
