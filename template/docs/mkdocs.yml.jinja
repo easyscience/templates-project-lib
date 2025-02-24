@@ -3,11 +3,15 @@
 ###########################
 
 # Project information
-site_name: EasyDiffraction Library
-site_url: https://docs.diffraction.org/lib
-repo_url: https://github.com/easyscience/EasyDiffractionLib
-copyright: © 2025 EasyDiffraction
+site_name: {{project__name}} Library
+site_url: {{project__urls__lib_docs}}
 
+# Repository
+repo_url: https://github.com/easyscience/EasyDiffractionLib
+edit_uri: edit/develop/docs/
+
+# Copyright
+copyright: © {{project__copyright_year}} {{project__name}}
 
 # Extra icons in the bottom right corner
 extra:
@@ -27,10 +31,12 @@ plugins:
 # Add new settings
 ##################
 
-# Format and layout of the global navigation for the site
+# Exclude files and folders from the global navigation
 not_in_nav: |
   index.md
   usage/dictionaries
+
+# Format and layout of the global navigation for the site
 nav:
   - Introduction:
       - Introduction: introduction/index.md
