@@ -16,8 +16,8 @@ copyright: © {{project__copyright_year}} {{project__name}}
 # Extra icons in the bottom right corner
 extra:
   social:
-    #- icon: easydiffraction  # File: overrides/.icons/easydiffraction.svg
-    #  link: https://easydiffraction.org
+    - icon: {{project__name | lower}}  # File: overrides/.icons/{{project__name | lower}}.svg
+      link: {{project__urls__homepage}}
     - icon: fontawesome/brands/github  # Name as in Font Awesome
       link: https://github.com/easyscience/{{project__repos__lib}}
 
