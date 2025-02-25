@@ -4,7 +4,7 @@ on:
   # Trigger the workflow on push
   push:
     # To the develop and master branches
-    branches: [develop, master]
+    branches: [develop, master, docs]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -65,7 +65,7 @@ jobs:
       # Install {{ project__name }} Library to run Jupyter notebooks
       # Install with the 'charts' and 'docs' extras
       - name: Install {{ project__name }} Library and its dependencies
-        run: pip install '.[charts,docs]' 
+        run: pip install '.[charts,docs]'
 
       # Clone assets extra from:
       # - easyscience/assets-docs
