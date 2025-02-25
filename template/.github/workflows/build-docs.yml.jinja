@@ -86,12 +86,15 @@ jobs:
       # Add the extra files from the easyscience/assets-branding repository
       - name: Add files from easyscience/assets-branding files
         run: |
+
           mkdir -p docs/assets/images/
-          cp ../assets-branding/easyscience/logos/dark.svg docs/assets/images/logo_dark.svg
-          cp ../assets-branding/easyscience/logos/light.svg docs/assets/images/logo_light.svg
-          cp ../assets-branding/easydiffraction/icons/ed-icon_256x256.png docs/assets/images/favicon.png  # !!!!!!!!!!!!
+          cp ../assets-branding/{{project__name | lower}}/hero/dark.png docs/assets/images/hero_dark.png
+          cp ../assets-branding/{{project__name | lower}}/hero/light.png docs/assets/images/hero_light.png
+          cp ../assets-branding/{{project__name | lower}}/logos/dark.svg docs/assets/images/logo_dark.svg
+          cp ../assets-branding/{{project__name | lower}}/logos/light.svg docs/assets/images/logo_light.svg
+          cp ../assets-branding/{{project__name | lower}}/icons/color.png docs/assets/images/favicon.png
           mkdir -p overrides/.icons/
-          cp ../assets-branding/easydiffraction/icons/ed-icon_bw.svg overrides/.icons/easydiffraction.svg  # !!!!!!!!!!!!
+          cp ../assets-branding/{{project__name | lower}}/icons/bw.svg overrides/.icons/{{project__name | lower}}.svg
           cp ../assets-branding/easyscience-org/icons/eso-icon_bw.svg overrides/.icons/easyscience.svg
 
       # Copy Jupyter notebooks from the project to the docs folder
@@ -141,8 +144,7 @@ jobs:
       # This extra step is needed to allow the download of the artifact in the next job
       # for pushing its content to the branch named 'gh_pages'
       - name:
-          Upload built site as artifact for gh_pages and easydiffraction.org
-          (master branch)
+          Upload built site as artifact for gh_pages (master branch)
         if: {% raw %}${{ env.CI_BRANCH == 'master' }}{% endraw %}
         uses: actions/upload-artifact@v4
         with:
@@ -184,7 +186,7 @@ jobs:
       - name: Deploy to easyscience.github.io/{{project__repos__lib}} (all branches)
         uses: actions/deploy-pages@v4
 
-      # Download built site as artifact from a previous job for gh_pages and easydiffraction.org (master branch)
+      # Download built site as artifact from a previous job for gh_pages (master branch)
       - name: Download built site from previous job (master branch)
         if: {% raw %}${{ env.CI_BRANCH == 'master' }}{% endraw %}
         uses: actions/download-artifact@v4
@@ -196,12 +198,12 @@ jobs:
       # To be able to push to the gh_pages branch, the personal GitHub API access
       # token GH_API_PERSONAL_ACCSESS_TOKEN must be set for this repository via
       # https://github.com/easyscience/{{project__repos__lib}}/settings/secrets/actions
-      # This branch is used to deploy the site to the custom domain https://easydiffraction.org
-      # Deploying is done with a webhook: https://github.com/easyscience/{{project__repos__lib}}/settings/hooks
+      # This branch is used to deploy the site to the custom domain.
+      # Deploying is done with a webhook:
+      # https://github.com/easyscience/{{project__repos__lib}}/settings/hooks
       # This is done for the gh_pages branch when the site is tested with a step above
       - name:
-          Deploy to gh_pages branch to trigger deployment to easydiffraction.org
-          (master branch)
+          Deploy to gh_pages branch to trigger deployment to custom domain (master branch)
         if: {% raw %}${{ env.CI_BRANCH == 'master' }}{% endraw %}
         uses: s0/git-publish-subdir-action@develop
         env:

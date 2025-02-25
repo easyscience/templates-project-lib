@@ -1,13 +1,22 @@
-# **{{ project__name }}**
+<p>
+  <picture>
+    <!-- light mode logo -->
+    <source media='(prefers-color-scheme: light)' srcset='https://raw.githubusercontent.com/easyscience/assets-branding/refs/heads/master/{{project__name | lower}}/logos/light.svg'>
+    <!-- dark mode logo -->
+    <source media='(prefers-color-scheme: dark)' srcset='https://raw.githubusercontent.com/easyscience/assets-branding/refs/heads/master/{{project__name | lower}}/logos/dark.svg'>
+    <!-- default logo == light mode logo -->
+    <img src='https://raw.githubusercontent.com/easyscience/assets-branding/refs/heads/master/{{project__name | lower}}/logos/light.svg' alt='{{project__name}}'>
+  </picture>
+</p>
 
-**{{ project__name }}** is a Python package for {{ project__extended_description | lower }}.
+**{{project__name }}** is a Python package for {{project__extended_description | lower}}.
 
-**{{ project__name }}** is built upon the [EasyScience] framework, which provides
+**{{project__name }}** is built upon the [EasyScience] framework, which provides
 essential tools for developing scientific libraries and applications.
 
 ## Useful Links
 
-- [Main Website] - Learn more about {{ project__name }}.
+- [Main Website] - Learn more about {{project__name}}.
 - [Documentation] - Access the full documentation.
 - [Discussions] - Ask questions or share ideas.
 - [Issue Tracker] - Report bugs or request new features.
@@ -15,7 +24,7 @@ essential tools for developing scientific libraries and applications.
 
 ## Contributing
 
-We welcome contributions! Our vision is for **{{ project__name }}** to be a
+We welcome contributions! Our vision is for **{{project__name}}** to be a
 community-driven, open-source project supported by a diverse group of
 contributors.
 
@@ -30,13 +39,13 @@ requests.
 **{{project__name}}** is licensed under the [BSD 3-Clause License].
 
 <!-- prettier-ignore-start -->
-[BSD 3-Clause License]: https://github.com/easyscience/{{ project__repos__lib }}/blob/master/LICENSE
-[Contributing Guidelines]: https://github.com/easyscience/{{ project__repos__lib }}/blob/master/CONTRIBUTING.md
+[BSD 3-Clause License]: https://github.com/easyscience/{{project__repos__lib}}/blob/master/LICENSE
+[Contributing Guidelines]: https://github.com/easyscience/{{project__repos__lib}}/blob/master/CONTRIBUTING.md
 [EasyScience]: https://easyscience.software
 [European Spallation Source (ESS)]: https://ess.eu
-[Main Website]: {{ project__urls__homepage }}
-[Documentation]: {{ project__urls__lib_docs }}
-[Discussions]: https://github.com/easyscience/{{ project__repos__lib }}/discussions
-[Issue Tracker]: https://github.com/easyscience/{{ project__repos__lib }}/issues
-[Source Code]: https://github.com/easyscience/{{ project__repos__lib }}
+[Main Website]: {{project__urls__homepage}}
+[Documentation]: {{project__urls__lib_docs}}
+[Discussions]: https://github.com/easyscience/{{project__repos__lib}}/discussions
+[Issue Tracker]: https://github.com/easyscience/{{project__repos__lib}}/issues
+[Source Code]: https://github.com/easyscience/{{project__repos__lib}}
 <!-- prettier-ignore-end -->
