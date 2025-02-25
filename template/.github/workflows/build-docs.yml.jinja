@@ -14,7 +14,7 @@ env:
   # Set the CI_BRANCH environment variable to be the branch name
   # Set the NOTEBOOKS_DIR environment variable to be the directory containing the Jupyter notebooks
   CI_BRANCH: {% raw %}${{ github.head_ref || github.ref_name }}{% endraw %}
-  NOTEBOOKS_DIR: examples
+  NOTEBOOKS_DIR: tutorials
 
 jobs:
   # Job 1: Build the static files for the documentation site
