@@ -65,7 +65,7 @@ jobs:
       # Install {{ project__name }} Library to run Jupyter notebooks
       # Install with the 'charts' and 'docs' extras
       - name: Install {{ project__name }} Library and its dependencies
-        run: pip install '{{ lib__package_name }}[charts,docs]'
+        run: pip install '.[charts,docs]'
 
       # Clone assets extra from:
       # - easyscience/assets-docs
