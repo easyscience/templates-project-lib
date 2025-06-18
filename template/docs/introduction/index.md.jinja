@@ -6,65 +6,69 @@ icon: material/information-slab-circle
 
 ## Description
 
-{{project__name}} is scientific software for
-{{project__extended_description}}.
+{{project__name}} is scientific software for {{project__extended_description}}.
 
 {% if project__deployment_type == "both" %}
-{{project__name}} is distributed as both a cross-platform desktop application
-and a Python library.
+It is available as both a cross-platform desktop application and a Python
+library.
 
-This documentation provides instructions for using the {{project__name}} Python
-library. Documentation for the {{project__name}} graphical user interface (GUI)
-is available [separately]({{project__urls__app_docs}}).
+This documentation covers the usage of the {{project__name}} Python library.
+For the graphical user interface (GUI) version, refer to the
+[GUI documentation]({{project__urls__app_docs}}).
 {% elif project__deployment_type == "lib" %}
 {{project__name}} is distributed as a Python library.
 {% elif project__deployment_type == "app" %}
 {{project__name}} is distributed as a cross-platform desktop application.
 {% endif %}
 
-![](../assets/images/hero_dark.png#gh-dark-mode-only)![](../assets/images/hero_light.png#gh-light-mode-only)
+## EasyScience
 
-## EasyScience Framework
-
-{{project__name}} is built upon the
-[EasyScience framework](https://easyscience.software), which provides essential
-tools for developing scientific libraries and applications.
-
-This framework ensures modularity, flexibility, and ease of integration with
-other scientific computing tools.
+{{project__name}} is developed using the
+[EasyScience framework](https://easyscience.software), which provides tools for
+building modular and flexible scientific libraries and applications.
 
 ## License
 
 {{project__name}} is licensed under the
 [BSD 3-Clause License](https://raw.githubusercontent.com/easyscience/{{project__repos__lib}}/master/LICENSE).
 
-## Latest release
+## Releases
 
-The latest release of {{project__name}} Python library is
+The latest version of the {{project__name}} Python library is
 [{% raw %}{{ vars.release_version }}{% endraw %}](https://github.com/easyscience/{{project__repos__lib}}/releases/latest).
 
-Full release notes, including new features, bug fixes, and improvements, are
-available on the
-[GitHub Releases page](https://github.com/easyscience/{{project__repos__lib}}/releases).
+For a complete list of new features, bug fixes, and improvements, see the
+[GitHub Releases Page](https://github.com/easyscience/{{project__repos__lib}}/releases).
 
-## Get in touch
+## Citation
 
-For general questions or comments, please contact us at [support@{{lib__package_name}}.org](mailto:support@{{lib__package_name}}.org).
+If you use {{project__name}} in your work, please cite the specific version you
+used.
 
-For bug reports and feature requests, please use
-[GitHub Issue Tracker](https://github.com/easyscience/{{project__repos__lib}}/issues)
-instead (free registration required).
+All official releases of the {{project__name}} are archived on Zenodo, each
+with a version-specific Digital Object Identifier (DOI).
+
+Citation details in various styles (e.g., APA, MLA) and formats (e.g., BibTeX,
+JSON) are available on the [Zenodo Archive Page]({{project__doi__lib}}).
 
 ## Contributing
 
-We welcome contributions! Our vision is for {{project__name}} to be a
-community-driven, open-source project supported by a diverse group of
+We welcome contributions from the community! {{project__name}} is intended to
+be a community-driven, open-source project supported by a diverse group of
 contributors.
 
-The project is currently maintained by the
-[European Spallation Source (ESS)](https://ess.eu) in Sweden.
+The project is maintained by the
+[European Spallation Source (ESS)](https://ess.eu).
 
-If you'd like to contribute, please refer to the
-[:material-account-plus: Contributing](../contributing/index.md) section for
-information about our code of conduct and instructions on submitting pull
-requests.
+To contribute, see our
+[:material-account-plus: Contributing Guidelines](https://github.com/EasyScience/{{project__repos__lib}}/blob/master/CONTRIBUTING.md)
+on GitHub.
+
+## Get in touch
+
+For general questions or feedback, contact us at
+[support@{{lib__package_name}}.org](mailto:support@{{lib__package_name}}.org).
+
+To report bugs or request features, please use the
+[GitHub Issue Tracker](https://github.com/easyscience/{{project__repos__lib}}/issues)
+(free registration required).

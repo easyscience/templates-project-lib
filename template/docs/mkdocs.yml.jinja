@@ -18,14 +18,10 @@ extra:
   social:
     - icon: {{project__name | lower}}  # File: overrides/.icons/{{project__name | lower}}.svg
       link: {{project__urls__homepage}}
+      name: {{project__name}} Main Webpage
     - icon: fontawesome/brands/github  # Name as in Font Awesome
       link: https://github.com/easyscience/{{project__repos__lib}}
-
-# Jupyter notebooks
-plugins:
-  - mkdocs-jupyter:
-      execute_ignore:
-        - '*emcee*.ipynb' # Ignore notebooks with 'emcee' in the name from execution
+      name: {{project__name}} Library Source Code on GitHub
 
 ##################
 # Add new settings
@@ -34,33 +30,24 @@ plugins:
 # Exclude files and folders from the global navigation
 not_in_nav: |
   index.md
-  usage/dictionaries
+  user-guide/parameters
 
 # Format and layout of the global navigation for the site
 nav:
   - Introduction:
       - Introduction: introduction/index.md
   - Installation & Setup:
-      - Installation & Setup: installation/index.md
+      - Installation & Setup: installation-and-setup/index.md
   - User Guide:
-      - User Guide: usage/index.md
-      - Terminology: usage/terminology.md
-      - Getting Started: usage/getting-started.md
-      - Workflow Steps:
-        - Workflow Steps: usage/workflow-steps/index.md
-        - Project: usage/workflow-steps/project.md
-        - Model: usage/workflow-steps/model.md
-        - Experiment: usage/workflow-steps/experiment.md
-        - Analysis: usage/workflow-steps/analysis.md
-        - Summary: usage/workflow-steps/summary.md
+      - User Guide: user-guide/index.md
+      - Analysis Workflow:
+        - Analysis Workflow: user-guide/analysis-workflow/index.md
+        - Project: user-guide/analysis-workflow/project.md
+        - Sample Model: user-guide/analysis-workflow/model.md
+        - Experiment: user-guide/analysis-workflow/experiment.md
+        - Analysis: user-guide/analysis-workflow/analysis.md
+        - Summary: user-guide/analysis-workflow/summary.md
   - Tutorials:
       - Tutorials: tutorials/index.md
-      - Basic Examples: []
-      - Simulation: []
-      - Fitting: []
-      - Advanced fitting: []
-      - Additional examples: []
   - API Reference:
-      - API Reference: api/index.md
-  - Contributing:
-      - Contributing: contributing/index.md
+      - API Reference: api-reference-reference/index.md
