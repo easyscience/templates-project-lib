@@ -1,51 +1,30 @@
 <p>
   <picture>
     <!-- light mode logo -->
-    <source media='(prefers-color-scheme: light)' srcset='https://raw.githubusercontent.com/easyscience/assets-branding/refs/heads/master/{{project__name | lower}}/logos/light.svg'>
+    <source media='(prefers-color-scheme: light)' srcset='https://raw.githubusercontent.com/easyscience/assets-branding/refs/heads/master/easypeasy/logos/light.svg'>
     <!-- dark mode logo -->
-    <source media='(prefers-color-scheme: dark)' srcset='https://raw.githubusercontent.com/easyscience/assets-branding/refs/heads/master/{{project__name | lower}}/logos/dark.svg'>
+    <source media='(prefers-color-scheme: dark)' srcset='https://raw.githubusercontent.com/easyscience/assets-branding/refs/heads/master/easypeasy/logos/dark.svg'>
     <!-- default logo == light mode logo -->
-    <img src='https://raw.githubusercontent.com/easyscience/assets-branding/refs/heads/master/{{project__name | lower}}/logos/light.svg' alt='{{project__name}}'>
+    <img src='https://raw.githubusercontent.com/easyscience/assets-branding/refs/heads/master/easypeasy/logos/light.svg' alt='EasyPeasy'>
   </picture>
 </p>
 
-**{{project__name }}** is a Python package for {{project__extended_description | lower}}.
+**{{ project_name }}** is a scientific software {{ project_extended_description | lower }}.
 
-**{{project__name }}** is built upon the [EasyScience] framework, which provides
-essential tools for developing scientific libraries and applications.
+**{{ project_name }}** is available both as a Python library and as a
+cross-platform desktop application. Here, we focus on the Python library.
+For the graphical user interface (GUI), please see the corresponding
+[GUI resources](https://github.com/easyscience/{{ app_repo_name }}).
 
 ## Useful Links
 
-- [Main Website] - Learn more about {{project__name}}.
-- [Documentation] - Access the full documentation.
-- [Discussions] - Ask questions or share ideas.
-- [Issue Tracker] - Report bugs or request new features.
-- [Source Code] - Explore the source code repository.
-
-## Contributing
-
-We welcome contributions! Our vision is for **{{project__name}}** to be a
-community-driven, open-source project supported by a diverse group of
-contributors.
-
-The project is currently maintained by the [European Spallation Source (ESS)].
-
-If you'd like to contribute, please refer to our [Contributing Guidelines] for
-information about our code of conduct and instructions on submitting pull
-requests.
-
-## License
-
-**{{project__name}}** is licensed under the [BSD 3-Clause License].
-
-<!-- prettier-ignore-start -->
-[BSD 3-Clause License]: https://github.com/easyscience/{{project__repos__lib}}/blob/master/LICENSE
-[Contributing Guidelines]: https://github.com/easyscience/{{project__repos__lib}}/blob/master/CONTRIBUTING.md
-[EasyScience]: https://easyscience.software
-[European Spallation Source (ESS)]: https://ess.eu
-[Main Website]: {{project__urls__homepage}}
-[Documentation]: {{project__urls__lib_docs}}
-[Discussions]: https://github.com/easyscience/{{project__repos__lib}}/discussions
-[Issue Tracker]: https://github.com/easyscience/{{project__repos__lib}}/issues
-[Source Code]: https://github.com/easyscience/{{project__repos__lib}}
-<!-- prettier-ignore-end -->
+- 📖 [Documentation](https://easyscience.github.io/{{ lib_repo_name }}/latest)
+- 🚀 [Getting Started](https://easyscience.github.io/{{ lib_repo_name }}/latest/introduction)
+- 🧪 [Tutorials](https://easyscience.github.io/{{ lib_repo_name }}/latest/tutorials)
+- 💬 [Get in Touch](https://easyscience.github.io/{{ lib_repo_name }}/latest/introduction/#get-in-touch)
+- 🧾 [Citation](https://easyscience.github.io/{{ lib_repo_name }}/latest/introduction/#citation)
+- 🤝 [Contributing](https://easyscience.github.io/{{ lib_repo_name }}/latest/introduction/#contributing)
+- 🐞 [Issue Tracker](https://github.com/easyscience/{{ lib_repo_name }}/issues)
+- 💡 [Discussions](https://github.com/easyscience/{{ lib_repo_name }}/discussions)
+- 🧑‍💻 [Source Code](https://github.com/easyscience/{{ lib_repo_name }})
+- ⚖️ [License](https://raw.githubusercontent.com/easyscience/{{ lib_repo_name }}/refs/heads/master/LICENSE)
