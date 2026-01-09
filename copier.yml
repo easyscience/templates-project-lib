@@ -13,6 +13,16 @@ lib_package_name:
   default: '{{ project_name | lower | replace("easy", "") }}'
   help: What is the project's python package name (should be small caps)?
 
+lib_python_min:
+  type: str
+  default: '3.11'
+  help: What is the minimum supported Python version for the library?
+
+lib_python_max:
+  type: str
+  default: '3.13'
+  help: What is the maximum supported Python version for the library?
+
 lib_docs_url:
   type: str
   default: 'https://easyscience.github.io/{{ lib_repo_name }}'
