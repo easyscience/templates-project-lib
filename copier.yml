@@ -36,4 +36,4 @@ lib_docs_url:
 _subdirectory: template
 _answers_file: .copier-answers.lib.yml
 _exclude:
-  - "_*"
+  - "*.partial.jinja"
