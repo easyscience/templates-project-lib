@@ -53,27 +53,24 @@ This section describes the most simple way to set up {{ project_name }} using
 - Add {{ project_name }} with the `visualization` extras, which include
   optional dependencies used for simplified visualization of charts and tables.
   This can be especially useful for running the Jupyter Notebook examples:
-  ```commandline
+  ```txt
   pixi add --pypi "{{ lib_package_name }}[visualization]"
   ```
 - Add a Pixi task to run {{ project_name }} commands easily:
-  ```commandline
+  ```txt
   pixi task add {{ lib_package_name }} "python -m {{ lib_package_name }}"
   ```
 
 #### Updating Pixi and {{ project_name }}
 
-To update all packages in the Pixi environment, including {{ project_name }}:
-
-```txt
-pixi update
-```
-
-To update Pixi itself to the latest version:
-
-```commandline
-pixi self-update
-```
+- To update all packages in the Pixi environment, including {{ project_name }}:
+  ```txt
+  pixi update
+  ```
+- To update Pixi itself to the latest version:
+  ```txt
+  pixi self-update
+  ```
 
 #### Uninstalling Pixi
 
