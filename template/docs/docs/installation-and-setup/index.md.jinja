@@ -236,8 +236,6 @@ interactively in two different ways: locally or online via Google Colab.
 
 ### Run Tutorials Locally with Pixi <small>recommended</small> { #running-with-pixi data-toc-label="Run Tutorials Locally with Pixi" }
 
-Here are the steps to follow using **JupyterLab** with Pixi:
-
 - Navigate to your existing Pixi project, created as described in the
   [Installing with Pixi](#installing-with-pixi) section.
 - Add JupyterLab and the Pixi kernel for Jupyter:
@@ -255,9 +253,7 @@ Here are the steps to follow using **JupyterLab** with Pixi:
 - Your web browser should open automatically. Click on one of the `*.ipynb`
   files and select the `Python (Pixi)` kernel to get started.
 
-### Run Tutorials Locally (Classical Method)
-
-Here are the steps to follow using **Jupyter Notebook**:
+### Classical Run Tutorials Locally
 
 - Install Jupyter Notebook and IPython kernel:
   ```txt
@@ -271,13 +267,9 @@ Here are the steps to follow using **Jupyter Notebook**:
   ```txt
   python -m {{ lib_package_name }} download-all-tutorials
   ```
-- Launch the Jupyter Notebook server in the `tutorials/` directory:
+- Launch the Jupyter Notebook server (opens browser automatically at `http://localhost:8888/`):
   ```txt
   jupyter notebook tutorials/
-  ```
-- In your web browser, go to:
-  ```txt
-  http://localhost:8888/
   ```
 - Open one of the `*.ipynb` files and select the `{{ project_name }} Python kernel`
   to get started.
@@ -285,13 +277,8 @@ Here are the steps to follow using **Jupyter Notebook**:
 ### Run Tutorials via Google Colab
 
 **Google Colab** lets you run Jupyter Notebooks in the cloud without any local
-installation.
-
-To use Google Colab:
+installation. This is the fastest way to start experimenting with {{ project_name }}.
 
 - Ensure you have a **Google account**.
 - Go to the **[:material-school: Tutorials](../tutorials/index.md)** section.
 - Click the :google-colab: **Open in Google Colab** button on any tutorial.
-
-This is the fastest way to start experimenting with {{ project_name }}, without
-setting up Python on your system.
