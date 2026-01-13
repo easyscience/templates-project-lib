@@ -7,7 +7,7 @@ icon: material/cog-box
 {{ project_name }} is a cross-platform Python library compatible with
 **Python {{ lib_python_min }} through {{ lib_python_max }}**.
 
-To install and set up {{ project_name }}, we recommend to use
+To install and set up {{ project_name }}, we recommend using
 [**Pixi**](https://prefix.dev), an advanced Python package and environment manager.
 
 Main benefits of using Pixi include:
@@ -27,7 +27,7 @@ is also provided for advanced users.
 
 ## Installing with Pixi <small>recommended</small> { #installing-with-pixi data-toc-label="Installing with Pixi" }
 
-This section describes the most simple way to set up {{ project_name }} using
+This section describes the simplest way to set up {{ project_name }} using
 **Pixi**.
 
 #### Installing Pixi
@@ -207,7 +207,7 @@ pip show {{ lib_package_name }}
 Installing unreleased versions is generally not recommended but may be useful
 for testing.
 
-To install {{ project_name }} from, e.g., the `develop` branch of GitHub:
+To install {{ project_name }} from the `develop` branch of GitHub, for example:
 
 ```txt
 pip install git+https://github.com/easyscience/{{ lib_repo_name }}@develop
@@ -255,15 +255,15 @@ Here are the steps to follow using **JupyterLab** with Pixi:
 - Your web browser should open automatically. Click on one of the `*.ipynb`
   files and select the `Python (Pixi)` kernel to get started.
 
-### Classical Run Tutorials Locally
+### Run Tutorials Locally (Classical Method)
 
-Here are the steps to follow in the case of **Jupyter Notebook**:
+Here are the steps to follow using **Jupyter Notebook**:
 
 - Install Jupyter Notebook and IPython kernel:
   ```txt
   pip install notebook ipykernel
   ```
-- Add the virtual environment as a Jupyter kernel
+- Add the virtual environment as a Jupyter kernel:
   ```txt
   python -m ipykernel install --user --name=venv --display-name "{{ project_name }} Python kernel"
   ```
