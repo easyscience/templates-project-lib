@@ -71,8 +71,8 @@ python = '{{ lib_python_max }}.*'
 # The `default` environment is always created and includes the `default` feature.
 # It does not need to be specified explicitly unless non-default features are included.
 
-py-min-env = { features = ['default', 'py-min'] }
-py-max-env = { features = ['default', 'py-max'] }
+py-{{ lib_python_min.split('.') | join('') }}-env = { features = ['default', 'py-min'] }
+py-{{ lib_python_max.split('.') | join('') }}-env = { features = ['default', 'py-max'] }
 
 # Default environment uses the maximum supported Python version
 
