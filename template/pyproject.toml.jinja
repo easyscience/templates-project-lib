@@ -64,11 +64,7 @@ visualization = [
   'plotly',     # Interactive plots
   'py3Dmol',    # Visualisation of crystal structures
 ]
-all = [
-  '{{ lib_package_name }}[dev]',
-  '{{ lib_package_name }}[docs]',
-  '{{ lib_package_name }}[visualization]',
-]
+all = ['{{ lib_package_name }}[dev]', '{{ lib_package_name }}[docs]', '{{ lib_package_name }}[visualization]']
 
 [project.urls]
 homepage = '{{ project_homepage_url }}'
@@ -147,7 +143,7 @@ close-quotes-on-newline = true
 # https://interrogate.readthedocs.io/en/latest/
 
 [tool.interrogate]
-fail-under = 0                   # Minimum docstring coverage percentage to pass
+fail-under = 0 # Minimum docstring coverage percentage to pass
 verbose = 1
 #exclude = ['src/**/__init__.py']
 
