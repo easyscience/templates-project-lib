@@ -5,7 +5,7 @@
 
 lib_repo_name:
   type: str
-  default: '{{ home_repo_name }}-lib'
+  default: '{{ project_repo_name }}-lib'
   help: What is the project lib repository under EasyScience organization?
 
 lib_package_name:
