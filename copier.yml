@@ -28,6 +28,13 @@ lib_docs_url:
   default: 'https://easyscience.github.io/{{ lib_repo_name }}'
   help: What is the project's library documentation URL?
 
+lib_doi:
+  type: str
+  default: '10.5281/zenodo.18163581'
+  help: |
+    What is the DOI for the library without the URL prefix 
+    (e.g., 10.5281/zenodo.xxxxxxx)?
+
 ---
 # =============================================================================
 # Template settings
