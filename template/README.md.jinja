@@ -9,12 +9,17 @@
   </picture>
 </p>
 
+
 **{{ project_name }}** is a scientific software {{ project_extended_description | lower }}.
 
+{% if has_lib and has_app %}
 **{{ project_name }}** is available both as a Python library and as a
 cross-platform desktop application. Here, we focus on the Python library.
 For the graphical user interface (GUI), please see the corresponding
 [GUI resources](https://github.com/easyscience/{{ app_repo_name }}).
+{% elif has_lib %}
+**{{ project_name }}** is available as a Python library.
+{% endif %}
 
 ## Useful Links
 
