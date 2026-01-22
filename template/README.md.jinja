@@ -1,3 +1,5 @@
+{% set repo_name = lib_repo_name %}
+
 <p>
   <picture>
     <!-- light mode logo -->
@@ -9,27 +11,33 @@
   </picture>
 </p>
 
-
 **{{ project_name }}** is a scientific software {{ project_extended_description | lower }}.
 
 {% if has_lib and has_app %}
-**{{ project_name }}** is available both as a Python library and as a
-cross-platform desktop application. Here, we focus on the Python library.
-For the graphical user interface (GUI), please see the corresponding
-[GUI resources](https://github.com/easyscience/{{ app_repo_name }}).
+  **{{ project_name }}** is available both as a Python library and as a
+  cross-platform desktop application.
+  {% if repo_name == lib_repo_name %}
+    Here, we focus on the Python library. For the graphical user interface 
+    (GUI), please see the corresponding [GUI resources](https://github.com/easyscience/{{ app_repo_name }}).
+  {% elif repo_name == app_repo_name %}
+    Here, we focus on the graphical user interface (GUI). For the Python 
+    library, please see the corresponding [library resources](https://github.com/easyscience/{{ app_repo_name }}).
+  {% endif %}
 {% elif has_lib %}
-**{{ project_name }}** is available as a Python library.
+  **{{ project_name }}** is available as a Python library.
+{% elif has_app %}
+  **{{ project_name }}** is available as a cross-platform Qt QML desktop application.
 {% endif %}
 
 ## Useful Links
 
-- 📖 [Documentation](https://easyscience.github.io/{{ lib_repo_name }}/latest)
-- 🚀 [Getting Started](https://easyscience.github.io/{{ lib_repo_name }}/latest/introduction)
-- 🧪 [Tutorials](https://easyscience.github.io/{{ lib_repo_name }}/latest/tutorials)
-- 💬 [Get in Touch](https://easyscience.github.io/{{ lib_repo_name }}/latest/introduction/#get-in-touch)
-- 🧾 [Citation](https://easyscience.github.io/{{ lib_repo_name }}/latest/introduction/#citation)
-- 🤝 [Contributing](https://easyscience.github.io/{{ lib_repo_name }}/latest/introduction/#contributing)
-- 🐞 [Issue Tracker](https://github.com/easyscience/{{ lib_repo_name }}/issues)
-- 💡 [Discussions](https://github.com/easyscience/{{ lib_repo_name }}/discussions)
-- 🧑‍💻 [Source Code](https://github.com/easyscience/{{ lib_repo_name }})
-- ⚖️ [License](https://raw.githubusercontent.com/easyscience/{{ lib_repo_name }}/refs/heads/master/LICENSE)
+- 📖 [Documentation](https://easyscience.github.io/{{ repo_name }}/latest)
+- 🚀 [Getting Started](https://easyscience.github.io/{{ repo_name }}/latest/introduction)
+- 🧪 [Tutorials](https://easyscience.github.io/{{ repo_name }}/latest/tutorials)
+- 💬 [Get in Touch](https://easyscience.github.io/{{ repo_name }}/latest/introduction/#get-in-touch)
+- 🧾 [Citation](https://easyscience.github.io/{{ repo_name }}/latest/introduction/#citation)
+- 🤝 [Contributing](https://easyscience.github.io/{{ repo_name }}/latest/introduction/#contributing)
+- 🐞 [Issue Tracker](https://github.com/easyscience/{{ repo_name }}/issues)
+- 💡 [Discussions](https://github.com/easyscience/{{ repo_name }}/discussions)
+- 🧑‍💻 [Source Code](https://github.com/easyscience/{{ repo_name }})
+- ⚖️ [License](https://raw.githubusercontent.com/easyscience/{{ repo_name }}/refs/heads/master/LICENSE)
