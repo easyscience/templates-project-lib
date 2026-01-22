@@ -1,42 +1,5 @@
 ---
 # =============================================================================
-# Lib-specific questions
-# =============================================================================
-
-lib_repo_name:
-  type: str
-  default: "peasy-lib"
-  help: What is the project lib repository under EasyScience organization?
-
-lib_package_name:
-  type: str
-  default: "easypeasy"
-  help: What is the project's python package name (should be small caps)?
-
-lib_python_min:
-  type: str
-  default: "3.11"
-  help: What is the minimum supported Python version for the library?
-
-lib_python_max:
-  type: str
-  default: "3.13"
-  help: What is the maximum supported Python version for the library?
-
-lib_docs_url:
-  type: str
-  default: "https://easyscience.github.io/{{ lib_repo_name }}"
-  help: What is the project's library documentation URL?
-
-lib_doi:
-  type: str
-  default: "10.5281/zenodo.18163581"
-  help: |
-    What is the DOI for the library without the URL prefix
-    (e.g., 10.5281/zenodo.xxxxxxx)?
-
----
-# =============================================================================
 # Template settings
 # =============================================================================
 
