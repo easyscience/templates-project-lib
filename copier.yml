@@ -44,12 +44,14 @@ lib_doi:
   help: |
     What is the DOI for the library (without the URL prefix, e.g., 10.5281/zenodo.xxxxxxx)?
 
+_project_type:
+  default: lib
+  ask_user: false
+
 ---
 # =============================================================================
 # Template settings
 # =============================================================================
-
-_type: lib
 
 _subdirectory: template
 _answers_file: .copier-answers.lib.yml
